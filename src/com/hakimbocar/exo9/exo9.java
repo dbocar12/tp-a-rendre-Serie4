@@ -32,7 +32,7 @@ public class exo9 {
         System.out.println("=============================================================");
 
         //Predicate<String> startsWithJandHasLengthIs5 = (s) ->(s.startsWith("J") && s.length()==5);
-        Predicate<String> startsWithJandHasLengthIs5 = (s) ->(startsWithJ.test(s) &&lengthIsFive.test(s));
+        Predicate<String> startsWithJandHasLengthIs5 = (s) ->(startsWithJ.test(s) && lengthIsFive.test(s));
         System.out.println("It test if the given string starts with 'J' and length is 5 using predicate: ");
         System.out.println(startsWithJandHasLengthIs5.test("Hi"));
         System.out.println(startsWithJandHasLengthIs5.test("Jello"));
