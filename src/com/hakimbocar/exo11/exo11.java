@@ -7,7 +7,7 @@ public class exo11 {
 
     public static void main(String[] args) {
 
-        List<String> JavaListDevs = Arrays.asList("Jose","Paul","Didier","Bocar","Hakim","Rayane","" +
+        List<String> JavaListDevs = Arrays.asList("Jose","Paul","Didier","Bocar","Hakim","Rayane",
                 "Makerem","Hela");
         System.out.println("List of JAVA developer :");
         JavaListDevs.forEach((developer)->System.out.println(developer+"\tLength->"+developer.length()));
