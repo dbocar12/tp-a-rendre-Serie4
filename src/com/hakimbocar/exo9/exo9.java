@@ -11,8 +11,8 @@ public class exo9 {
         System.out.println(lengthMoreThan4.test("HelloPO"));
         System.out.println("=============================================================");
 
-        Predicate<String> notEmpty = String::isEmpty; // Without Lamba Expression
-        //Predicate<String> notEmpty = (s) -> (s.isEmpty());
+        Predicate<String> notEmpty = String::isEmpty; // Without Lambda Expression
+        //Predicate<String> notEmpty = (s) -> (s.isEmpty()); // with Lambda Expression
         System.out.println("It test if the given string is empty with predicate: ");
         System.out.println(notEmpty.test(""));
         System.out.println(notEmpty.test("Hello"));
