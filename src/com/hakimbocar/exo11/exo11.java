@@ -37,7 +37,7 @@ public class exo11 {
         System.out.println("===========================================================");
 
         // comparator that compare by lastName of Person
-        Comparator<Person> lastNameComparator = (p1, p2)->p1.getLastName().compareTo(p2.getLastName());
+        Comparator<Person> lastNameComparator = Comparator.comparing(Person::getLastName);
 
         // sorting by LastName
         persons.sort(lastNameComparator);
