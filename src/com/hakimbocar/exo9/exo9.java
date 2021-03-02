@@ -1,5 +1,4 @@
 package com.hakimbocar.exo9;
-
 import java.util.function.Predicate;
 
 public class exo9 {
