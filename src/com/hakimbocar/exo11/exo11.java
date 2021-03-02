@@ -24,10 +24,11 @@ public class exo11 {
 
         List<Person> persons = Arrays.asList(
                 new Person("Bocar", "Diallo",23),
-                new Person("Hakim", "Ben Taarit",23),
-                new Person("Roronoa", "Zoro",23),
-                new Person("Monkey", "D.Luffy",23),
-                new Person("Alex", "Zoro",23)
+                new Person("Hakim", "Ben Taarit",22),
+                new Person("Roronoa", "Zoro",24),
+                new Person("Monkey", "D.Luffy",18),
+                new Person("Alex", "Zoro",26),
+                new Person("Bocar", "Ba",26)
 
         );
 
@@ -54,23 +55,31 @@ public class exo11 {
 
         // sorting by LastName and firstname
         persons.sort(lastNameOrFistComparator);
-        System.out.println("After Sorting by FistName and LastName the person data:");
+        System.out.println("After Sorting by LastName and FirstName the person data:");
         persons.forEach((p)->System.out.println(p));
         System.out.println("===========================================================");
 
-        // sorting by LastName and firstname reversed order
-        persons.sort(lastNameOrFistComparator.reversed());
-        System.out.println("After Sorting by FistName and LastName reversed order the person data:");
+        // comparator that compare by lastName and if necessary the fistName of Person
+        Comparator<Person> FirstNameFirstAndLastNameComparator = (p1, p2)->  {
+            if ((p1.getFirstName().compareTo(p2.getFirstName()) == 0 )) {
+                return p1.getLastName().compareTo(p2.getLastName());
+            }
+            return p1.getFirstName().compareTo(p2.getFirstName());
+        };
+
+        // sorting by FistName and LastName
+        persons.sort(FirstNameFirstAndLastNameComparator);
+        System.out.println("After Sorting by FistName and LastName the person data:");
         persons.forEach((p)->System.out.println(p));
         System.out.println("===========================================================");
 
 
         List<Person> personsWithNull = Arrays.asList(
                 new Person("Bocar", "Diallo",23),
-                new Person("Hakim", "Ben Taarit",23),
-                new Person("Roronoa", "Zoro",23),
+                new Person("Hakim", "Ben Taarit",22),
+                new Person("Roronoa", "Zoro",24),
                 null,
-                new Person("Paul", "Jackson",23),
+                new Person("Paul", "Jackson",26),
                 null
 
         );
@@ -87,7 +96,7 @@ public class exo11 {
 
         // sorting by LastName and firstname reversed order with null value
         personsWithNull.sort(lastNameOrFistComparatorWithNull);
-        System.out.println("After Sorting by FistName and LastName the person with null data:");
+        System.out.println("After Sorting by LastName and FirstName the person with null data:");
         personsWithNull.forEach((p)->System.out.println(p));
         System.out.println("===========================================================");
 
