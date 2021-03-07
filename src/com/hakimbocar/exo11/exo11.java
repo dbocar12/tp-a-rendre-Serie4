@@ -13,7 +13,7 @@ public class exo11 {
         JavaListDevs.forEach((developer)->System.out.println(developer+"\tLength->"+developer.length()));
 
         // comparator that compare by length of the string
-        Comparator<String> lengthComparator = (s1, s2) -> s2.length() - s1.length();
+        Comparator<String> lengthComparator = Comparator.comparingInt(String::length);
 
         // sorting by length of the string
         JavaListDevs.sort(lengthComparator);
@@ -106,6 +106,7 @@ public class exo11 {
         System.out.println("After Sorting by LastName then FirstName the person with null data:");
         personsWithNull.forEach(System.out::println);
         System.out.println("===========================================================");
+
 
 
     }
