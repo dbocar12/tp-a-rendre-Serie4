@@ -4,7 +4,7 @@ import java.util.function.Predicate;
 public class exo9 {
     public static void main(String[] args) {
         Predicate<String> lengthMoreThan4 = (s) -> (s.length() > 4);
-        System.out.println("It test if the given string's length is greather than 4 with predicate: ");
+        System.out.println("It test if the given string's length is greater than 4 with predicate: ");
         System.out.println(lengthMoreThan4.test("Hi"));
         System.out.println(lengthMoreThan4.test("Hello"));
         System.out.println(lengthMoreThan4.test("HelloPO"));
